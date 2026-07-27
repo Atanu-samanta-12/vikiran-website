@@ -143,28 +143,28 @@ nav ul li a {
     margin-bottom: 80px;
 }
 
-.President, .Vice-President, .Outreach, .Talk-coordinator, .Treasurer, .Website-coordinator, .FIC {
+.President, .Vice-President, .Outreach, .Talk-coordinator, .Talk-coordinator2, .Talk-coordinator3, .Treasurer, .Website-coordinator, .FIC {
+    position: relative;
     background-size: cover;
     background-position: center;
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     border-radius: 10px;
-    color: red;
     text-align: center;
     padding: 10px;
     transition: box-shadow 0.5s, transform 0.3s;
 }
 
-.President:hover, .Vice-President:hover, .Outreach:hover, .Talk-coordinator:hover, .Treasurer:hover, .Website-coordinator:hover, .FIC:hover {
+.President:hover, .Vice-President:hover, .Outreach:hover, .Talk-coordinator:hover, .Talk-coordinator2:hover, .Talk-coordinator3:hover, .Treasurer:hover, .Website-coordinator:hover, .FIC:hover {
     box-shadow: 0 0 40px 10px rgba(186, 98, 194, 0.8);
     transform: scale(1.05);
 }
 
 .President {
-    background-image: url('Images/president.jpg');
+    background-image: url('Images/president.jpeg');
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -179,12 +179,23 @@ nav ul li a {
 }
 
 .Talk-coordinator {
-    background-image: url('Images/talk_coordinator.jpg');
+    background-image: url('Images/talk_coordinator.jpeg');
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Talk-coordinator2 {
+    background-image: url('Images/talk_coordinator2.jpeg');
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Talk-coordinator3 {
+    background-image: url('Images/talk_coordinator3.jpeg');
+    background-position: top center;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .Treasurer {
-    background-image: url('Images/treasurer_placeholder.jpg');
+    background-image: url('Images/meghna.jpeg');
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -197,9 +208,23 @@ nav ul li a {
     background-image: url('Images/fic.jpg');
 }
 
-.President p, .Vice-President p, .Outreach p, .Talk-coordinator p, .Treasurer p, .Website-coordinator p, .FIC p {
-    margin-bottom: -370px;
-    color: red;
+.President h2, .Vice-President h2, .Outreach h2, .Talk-coordinator h2, .Talk-coordinator2 h2, .Talk-coordinator3 h2, .Treasurer h2, .Website-coordinator h2, .FIC h2 {
+    position: absolute;
+    bottom: -40px;
+    color: #ffea00;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+}
+
+.President p, .Vice-President p, .Outreach p, .Talk-coordinator p, .Talk-coordinator2 p, .Talk-coordinator3 p, .Treasurer p, .Website-coordinator p, .FIC p {
+    position: absolute;
+    bottom: -65px;
+    color: #ff5252;
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
 }
 
 /* Faculty In Charge Section */
@@ -219,8 +244,8 @@ nav ul li a {
     margin-bottom: 80px;
 }
 
-/* Alumni Section */
-#alumni {
+/* Past Members / Alumni Section */
+#past-members, #alumni {
     padding: 50px 0;
     margin-top: 50px;
 }
@@ -487,4 +512,177 @@ form .btn2 {
     font-weight: 300;
     margin-top: 20px;
     color: white;
+}
+
+/* Merchandise Section */
+#merchandise {
+    padding: 50px 0;
+}
+
+.merchandise-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+}
+
+.merchandise-card {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+
+.merchandise-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffea00;
+    box-shadow: 0 10px 30px rgba(255, 234, 0, 0.15);
+}
+
+.merchandise-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    transition: transform 0.5s;
+}
+
+.merchandise-img[src=""],
+.merchandise-img:not([src]) {
+    display: none;
+}
+
+.merchandise-placeholder-content {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+.merchandise-placeholder-content i {
+    font-size: 45px;
+    color: #ffea00;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.merchandise-placeholder-content p {
+    font-size: 18px;
+    color: #e0e0e0;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.merchandise-placeholder-content small {
+    font-size: 13px;
+    color: #888;
+}
+
+.merchandise-card:hover .merchandise-img {
+    transform: scale(1.08);
+}
+
+.merchandise-layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), #831097);
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.merchandise-card:hover .merchandise-layer {
+    height: 100%;
+}
+
+.merchandise-layer h3 {
+    font-size: 22px;
+    color: #ffea00;
+    margin-bottom: 10px;
+}
+
+.merchandise-layer p {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Collaboration Section */
+#collaboration {
+    padding: 50px 0;
+}
+
+.collaboration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.collaboration-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+
+.collaboration-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #ffea00;
+    box-shadow: 0 10px 30px rgba(255, 234, 0, 0.15);
+}
+
+.collaboration-card h3 {
+    color: #ffea00;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.collaboration-card p {
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.collab-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ffea00;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.collab-link:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.collab-link i {
+    margin-left: 6px;
+    font-size: 13px;
 }
