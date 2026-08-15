@@ -33,7 +33,7 @@ html {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url('Images/background.gif');
+    background-image: url('Images/bg.gif');
     background-size: cover;
     background-position: center;
 }
@@ -340,6 +340,67 @@ nav ul li a:hover {
 .recent-title {
     color: var(--primary);
     border-left-color: var(--primary);
+}
+
+.regular-title {
+    color: var(--secondary);
+    border-left-color: var(--secondary);
+}
+
+.regular-activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.regular-activity-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 30px 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+    backdrop-filter: blur(10px);
+}
+
+.regular-activity-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.15);
+}
+
+.activity-icon {
+    font-size: 36px;
+    color: var(--primary);
+    background: rgba(0, 212, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    transition: color 0.4s, background 0.4s, transform 0.4s, border-color 0.4s;
+}
+
+.regular-activity-card:hover .activity-icon {
+    color: var(--accent);
+    background: rgba(255, 209, 102, 0.12);
+    border-color: rgba(255, 209, 102, 0.25);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.activity-info h3 {
+    color: var(--text-main);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.activity-info p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 .recent-events-list {
