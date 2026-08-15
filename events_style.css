@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Color Palette System */
+:root {
+    --bg-dark: #0B1020;        /* Deep Navy */
+    --primary: #00D4FF;        /* Electric Cyan */
+    --secondary: #7C3AED;      /* Purple */
+    --text-main: #F8FAFC;      /* Off-White */
+    --text-muted: #94A3B8;     /* Muted Slate */
+    --accent: #FFD166;         /* Golden Yellow */
+    --card-bg: rgba(15, 23, 42, 0.75);
+    --card-border: rgba(0, 212, 255, 0.2);
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rockwell', sans-serif;
+    font-family: 'Outfit', 'Rockwell', sans-serif;
     box-sizing: border-box;
-    color: white;
+    color: var(--text-main);
 }
 
 body {
-    background-color: #1a001a;
+    background-color: var(--bg-dark);
 }
 
 html {
@@ -42,186 +56,212 @@ html {
 
 .header-text {
     margin-top: 10%;
-    text-align: center; /* Center align the text */
+    text-align: center;
 }
 
 .header-text p {
-    color: yellow;
+    color: var(--accent);
     margin-top: 50px;
     font-size: 50px;
+    font-weight: 600;
 }
 
 .header-text h1 {
-    margin-left: 50px; /* Adjust as needed */
-    color: white;
-    font-size: 75px; /* Adjust as needed */
-    font-family: 'Allura', cursive; /* Add cursive as fallback */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide any overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis to indicate overflow */
+    margin-left: 50px;
+    color: var(--text-main);
+    font-size: 75px;
+    font-family: 'Allura', cursive;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* TALKS */
 .talks-header h1 {
-    color: red;
+    color: var(--primary);
     margin-top: 50px;
     font-size: 50px;
-    font-family: 'Roboto Mono';
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
 } 
 
 .talks-header img {
-    border-radius: 50px;
+    border-radius: 20px;
     margin-left: 40px;
     margin-top: 35px;
-    width: 400px; /* Set a fixed width for consistency */
-    height: 400px; /* Set a fixed height for consistency */
+    width: 400px;
+    height: 400px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
 }
 
 .talks-header p {
-    color: yellow;
+    color: var(--text-main);
     margin-left: 480px;
     margin-right: 70px;
     margin-top: -350px;
     font-size: 20px;
+    line-height: 1.6;
 }
 
 .talks-table {
     border-collapse: collapse;
-    margin: 55px auto; /* Center the table horizontally */
+    margin: 55px auto;
     font-size: 20px;
-    width: 80%; /* Adjust the width as needed */
+    width: 80%;
     min-width: 400px;
-    background-color: #1a001a;
+    background-color: rgba(15, 23, 42, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
 }
 
 .talks-table thead tr {
-    background-color: purple;
-    color: #ffffff;
+    background-color: var(--secondary);
+    color: var(--text-main);
     text-align: left;
     font-weight: bold;
 }
 
 .talks-table th, .talks-table td {
-    padding: 12px 15px;
-    border: 1px solid #ffffff; /* Add borders for better visibility */
+    padding: 14px 18px;
+    border: 1px solid rgba(0, 212, 255, 0.15);
 }
 
 .talks-table tbody tr {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.15);
 }
 
 .talks-table tbody tr:nth-of-type(even) {
-    background-color: #361440;
+    background-color: rgba(124, 58, 237, 0.1);
 }
 
 .talks-table tbody tr:last-of-type {
-    border-bottom: 5px solid #009879;
+    border-bottom: 4px solid var(--primary);
 }
 
 .talks-table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: var(--primary);
 }
 
 /* PRERNA */
 .prerna h1 {
-    color: red;
+    color: var(--primary);
     margin-top: 50px;
     font-size: 50px;
-    font-family: 'Roboto Mono';
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
 }
 
 .prerna img {
     margin-left: 10px;
     border-radius: 20px;
-    width: 400px; /* Set a fixed width for consistency */
-    height: auto; /* Maintain aspect ratio */
+    width: 400px;
+    height: auto;
     margin-top: -1900px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
 }
 
 .prerna p {
-    color: yellow;
+    color: var(--text-main);
     margin-left: 480px;
     margin-right: 70px;
     font-size: 20px;
+    line-height: 1.6;
 }
 
 /* SCIENTIA */
 .scientia h1 {
-    color: red;
+    color: var(--primary);
     margin-top: 50px;
     font-size: 50px;
-    font-family: 'Roboto Mono';
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
 }
 
 .scientia img {
     margin-left: 10px;
-    width: 400px; /* Set a fixed width for consistency */
-    height: auto; /* Maintain aspect ratio */
-    margin-top: -480px; /* Adjust as needed */
+    width: 400px;
+    height: auto;
+    margin-top: -480px;
+    border-radius: 20px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 212, 255, 0.2);
 }
 
 .scientia p {
-    color: yellow;
+    color: var(--text-main);
     margin-left: 480px;
     margin-right: 70px;
     font-size: 20px;
+    line-height: 1.6;
 }
 
 .scientia_winners h1 {
     margin-left: 500px;
     margin-top: -100px;
     font-size: 50px;
+    color: var(--accent);
 }
 
 .scientia_winners li {
     margin-left: 500px;
-    margin-top: 00px;
+    margin-top: 10px;
     font-size: 20px;
-    color: rgb(255, 132, 0);
+    color: var(--accent);
 }
 
 /* MEME MAKING */
 .meme-make-content h1 {
-    color: red;
+    color: var(--primary);
     margin-top: 50px;
     font-size: 40px;
-    font-family: 'Roboto Mono';
-    text-align: center; /* Center-align the heading */
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-align: center;
 }
 
 .meme-make-content p {
-    color: yellow;
-    margin: 20px auto; /* Center the paragraph within the container */
-    padding: 0 10%; /* Add padding for better readability */
+    color: var(--text-main);
+    margin: 20px auto;
+    padding: 0 10%;
     font-size: 20px;
-    text-align: center; /* Center-align the paragraph text */
-    width: 80%; /* Restrict width for better readability */
+    text-align: center;
+    width: 80%;
+    line-height: 1.6;
 }
 
 .meme-image {
     display: flex;
-    justify-content: center; /* Center the images horizontally */
-    gap: 20px; /* Add some space between images */
+    justify-content: center;
+    gap: 25px;
     margin-top: 20px;
 }
 
 .meme-item {
-    text-align: center; /* Center-align items */
+    text-align: center;
 }
 
 .meme-item img {
-    width: 280px; /* Set a fixed width for consistency */
-    height: auto; /* Maintain aspect ratio */
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 #meme-making p {
-    text-align: center; /* Center-align the winner and special mention text */
-    margin-top: 10px; /* Adjust margin for better spacing */
+    text-align: center;
+    margin-top: 10px;
+    color: var(--accent);
 }
 
 #meme-making p span {
-    display: block; /* Ensure the span takes up full width */
-    margin-top: 5px; /* Adjust margin for better spacing */
-    font-weight: bold; /* Highlight the special mention */
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: var(--primary);
 }
+
